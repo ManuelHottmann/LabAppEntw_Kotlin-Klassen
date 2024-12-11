@@ -1,6 +1,6 @@
 package com.example.kotlin_classes.classes.data
 
-/*
+/**
  *    Erstelle folgende Data-Class:   Product(name, category, price, inStock)
  */
 data class Product(
@@ -10,7 +10,7 @@ data class Product(
     val inStock: Boolean
 ) {
     
-    /*
+    /**
      *    Implementiere eine Rabattfunktion applyDiscount(discount). 
      *    Diese Methode soll einen Rabatt auf den Preis anwenden und eine neue Instanz des Produkts mit einem reduzierten Preis zurückgeben. 
      *    Verwende hierfür die copy() Methode.​
@@ -20,7 +20,7 @@ data class Product(
     }
 }
 
-/*
+/**
  *    Erstelle eine weitere Data-Class: Order(orderNumber, products, customer).
  *    Dazu eine Methode welche die Gesamtsumme der Bestellung berechnen soll, indem sie die Preise aller Product-Objekte in der products-Liste summiert.
  */
@@ -33,7 +33,7 @@ data class Order(val orderNumber: String, val products: List<Product>, val custo
         }
         return total
     }
-    /*
+    /**
      * Alternativ
         fun calculateTotal(): Double {
             return products.sumOf { it.price }
@@ -41,7 +41,7 @@ data class Order(val orderNumber: String, val products: List<Product>, val custo
      */
 
      
-    /*   
+    /**
      *    Füge der Order-Klasse eine Methode filterInStockProducts():Order hinzu, die eine neue Bestellung nur mit den Produkten erstellt, die auf Lager sind.
      *    Verwende auch hier die copy()-Funktion von data-Klassen, um eine abgewandelte Kopie der Bestellung zu erstellen​
      */
@@ -54,7 +54,7 @@ data class Order(val orderNumber: String, val products: List<Product>, val custo
 }
  
 fun main() {
-    /*
+    /**
      * Hier werden 3 Product-Klassen angelegt mit welchen die Funktionen getestet werden
      */
     val product1 = Product("Laptop", "Elektronik", 999.99, true)
