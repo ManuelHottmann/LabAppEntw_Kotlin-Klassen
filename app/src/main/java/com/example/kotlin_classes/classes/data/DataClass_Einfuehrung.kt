@@ -1,5 +1,7 @@
 package com.example.kotlin_classes.classes.data
 
+//Einführung zur Data-Class
+
     data class Book(
         var title: String,
         var author: String,
